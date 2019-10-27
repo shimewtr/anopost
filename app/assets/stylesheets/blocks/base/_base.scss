@@ -1,0 +1,15 @@
+@import "../../common";
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $width-main-content;
+}

@@ -1,0 +1,21 @@
+@import "../../common";
+
+.introduction {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+
+    &__icon {
+        width: 200px;
+        height: 200px;
+    }
+
+    &__text {
+        margin-top: 35px;
+        color: $font-main;
+        text-align: center;
+        font-size: $font-introduction-text;
+        line-height: $line-height-introduction-text;
+    }
+}
