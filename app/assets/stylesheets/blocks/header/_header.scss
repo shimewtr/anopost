@@ -1,0 +1,33 @@
+@import "../../common";
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  border-bottom: 1px solid $border;
+
+  &__content {
+    display: flex;
+    width: $width-main-content;
+    height: 100%;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+
+  &__icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  &__app-name {
+    margin-left: 20px;
+    color: $main;
+    font-size: $font-header-logo;
+  }
+}

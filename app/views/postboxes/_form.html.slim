@@ -1,0 +1,14 @@
+= form_with model: postbox, local: true do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title
+  .form-group
+    = f.label :description
+    = f.text_area :description
+  .form-check
+    = f.radio_button :is_published, true
+    = f.label :is_publish_true, '公開'
+  .form-check
+    = f.radio_button :is_published, false, checked: true
+    = f.label :is_publish_false, '非公開'
+  = f.submit "作成"

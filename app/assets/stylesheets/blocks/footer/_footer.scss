@@ -1,0 +1,58 @@
+@import "../../common";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: $width-footer-content;
+    height: 100%;
+    border-top: 1px solid $border;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__app-name {
+    margin-left: 20px;
+    color: $font-footer;
+    font-size: $font-header-logo;
+  }
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 400px;
+
+  &__item {
+    display: inline;
+    color: $font-footer;
+    font-size: $font-footer-link;
+  }
+}
+
+.footer-copy {
+  margin-top: 20px;
+  color: $font-footer;
+  font-size: $font-footer-link;
+}
+
+.footer-icon {
+  margin-top: 5px;
+  color: $font-footer
+}
