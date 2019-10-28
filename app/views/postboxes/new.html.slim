@@ -4,3 +4,5 @@
     |AnoPostは匿名の投書箱を簡単に作成できる
     br
     |Webサービスです。
+  .postbox-form
+    = render "form", from: :new, url: postboxes_path, postbox: @postbox

@@ -1,11 +1,5 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  title: MyString
-  description: MyText
-  is_published: false
-
-two:
-  title: MyString
-  description: MyText
+postbox_1:
+  uid: jPnI0mCqv8LIPyGY9xXrIWiZadg
+  title: テストのポストボックス
+  description: このポストボックスはテスト用です。
   is_published: false

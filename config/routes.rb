@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root to: "postboxs#new"
+  root to: "postboxes#new"
 
-  get "postboxs/index"
-  get "postboxs/show"
-  get "postboxs/new"
-  get "postboxs/edit"
+  get "/:uid", to: "postboxes#show"
+  resources :postboxes, param: :uid
 end
