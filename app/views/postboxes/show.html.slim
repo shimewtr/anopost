@@ -1,5 +1,14 @@
+- @page_title = @postbox.title
+
 p = @postbox.title
 p = @postbox.description
+- if @postbox.is_published
+  p この投書箱に投稿した内容はURLを知っているすべての利用者が閲覧することができます。
+- else
+  p この投書箱に投稿した内容は管理者のみが閲覧することができます。
 = render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
-- @postbox.posts.each do |post|
-  p = post.content
+- if @postbox.is_published
+  p 投稿一覧
+  - @postbox.posts.each do |post|
+    p = post.content
+    p = post.created_at

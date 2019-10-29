@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     @postbox = Postbox.find_by(uid: params[:uid])
     @post = @postbox.posts.build(post_prams)
     if @post.save
-      flash[:success] = "登録が完了しました！"
       redirect_to postbox_path(@postbox.uid), notice: "投稿しました"
     else
       render "new"
