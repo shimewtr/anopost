@@ -1,11 +1,13 @@
 footer.footer
   .footer__content
-    .footer-logo
-      = image_tag("anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon")
-      p.footer-logo__app-name = t(:app_name)
+    = link_to root_path, class: "footer-logo-link" do
+      .footer-logo
+        = image_tag("anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon")
+        p.footer-logo__app-name = t(:app_name)
     ul.footer-link
       li.footer-link__item このサイトについて
       li.footer-link__item 利用規約
       li.footer-link__item プライバシーポリシー
-    p.footer-copy &copy;wawawatataru
-    .footer-icon = icon 'fab', 'github'
+    = link_to "https://github.com/wawawatataru/anopost", class: "footer-github-link" do
+      p.footer-copy &copy;wawawatataru
+      .footer-icon = icon 'fab', 'github'
