@@ -4,3 +4,17 @@ postbox_1:
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
   is_published: false
+
+published_postbox:
+  id: 100
+  uid: D7apaq6Rb7iv64YjOE0Ay84zTNo
+  title: テストのポストボックス
+  description: このポストボックスはテスト用です。
+  is_published: true
+
+unpublished_postbox:
+  id: 101
+  uid: D7apaq6Rb7iv64YjOE0Ay84zTN0
+  title: テストのポストボックス
+  description: このポストボックスはテスト用です。
+  is_published: false
