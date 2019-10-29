@@ -1,9 +1,3 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  content: MyText
-  postbox_id: 1
-
-two:
-  content: MyText
+post_1:
+  content: ポストの内容
   postbox_id: 1

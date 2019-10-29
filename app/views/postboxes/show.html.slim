@@ -1,2 +1,5 @@
-h1 Postboxs#show
-p Find me in app/views/postboxs/show.html.slim
+p = @postbox.title
+p = @postbox.description
+= render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
+- @postbox.posts.each do |post|
+  p = post.content

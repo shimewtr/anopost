@@ -9,6 +9,8 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render "header"
+    - if flash.notice.present?
+      .alert.alert-success= flash.notice
     .content
       = yield
     = render "footer"

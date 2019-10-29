@@ -7,7 +7,7 @@ class PostboxTest < ActiveSupport::TestCase
     @postbox = postboxes(:postbox_1)
   end
 
-  test "is valid title" do
+  test "titleのバリデーションが正しいか" do
     postbox = postboxes(:postbox_1)
     postbox.title = "ポストボックスのタイトル"
     assert postbox.valid?
@@ -19,7 +19,7 @@ class PostboxTest < ActiveSupport::TestCase
     assert postbox.invalid?
   end
 
-  test "is valid description" do
+  test "descriptionのバリデーションが正しいか" do
     postbox = postboxes(:postbox_1)
     postbox.description = "ポストボックスの説明テキスト"
     assert postbox.valid?
