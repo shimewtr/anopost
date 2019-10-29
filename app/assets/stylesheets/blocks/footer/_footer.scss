@@ -15,6 +15,10 @@
   }
 }
 
+.footer-logo-link {
+  text-decoration: none;
+}
+
 .footer-logo {
   display: flex;
   align-items: center;
@@ -44,6 +48,14 @@
     color: $font-footer;
     font-size: $font-footer-link;
   }
+}
+
+.footer-github-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .footer-copy {
