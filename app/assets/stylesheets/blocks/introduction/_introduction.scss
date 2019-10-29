@@ -4,17 +4,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0;
 
     &__icon {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
 
     &__text {
         margin-top: 35px;
         color: $font-main;
         text-align: center;
+        font-weight: normal;
         font-size: $font-introduction-text;
         line-height: $line-height-introduction-text;
     }

@@ -9,6 +9,7 @@ body {
 
 .content {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     width: $width-main-content;
