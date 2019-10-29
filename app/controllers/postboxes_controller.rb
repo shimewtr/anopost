@@ -4,7 +4,7 @@ class PostboxesController < ApplicationController
   before_action :set_postbox, only: [:show, :edit, :update, :destroy]
 
   def index
-    @postbox = Postbox.all
+    @postboxes = Postbox.all
   end
 
   def show
@@ -41,11 +41,6 @@ class PostboxesController < ApplicationController
 
   private
     def set_postbox
-      puts params[:title]
-      puts "======"
-      puts "======"
-      puts "======"
-      puts "======"
       @postbox = Postbox.find_by!(uid: params[:uid])
     end
 
