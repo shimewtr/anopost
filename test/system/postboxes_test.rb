@@ -15,4 +15,12 @@ class PostboxesTest < ApplicationSystemTestCase
     click_button "作成"
     assert_text "投書箱のタイトルを作成しました"
   end
+
+  test "投書箱が正しく更新できるか" do
+    visit edit_postbox_path(postboxes(:postbox_1))
+    fill_in "postbox_title", with: "更新後のタイトル"
+    fill_in "postbox_description", with: "更新後の説明テキスト"
+    click_button "更新"
+    assert_text "更新後のタイトルを更新しました"
+  end
 end

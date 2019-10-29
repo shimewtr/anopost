@@ -7,4 +7,8 @@ class Postbox < ApplicationRecord
   validates :is_published,  inclusion: { in: [true, false] }
 
   has_many :posts
+
+  def to_param
+    uid
+  end
 end
