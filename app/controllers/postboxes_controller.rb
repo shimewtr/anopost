@@ -28,7 +28,8 @@ class PostboxesController < ApplicationController
   end
 
   def update
-    @postbox.update!(postbox_prams)
+    @postbox.update!(update_postbox_prams)
+    redirect_to edit_postbox_path(@postbox), notice: "#{@postbox.title}を更新しました"
   end
 
   def destroy
@@ -46,5 +47,9 @@ class PostboxesController < ApplicationController
 
     def postbox_prams
       params.require(:postbox).permit(:title, :description, :is_published)
+    end
+
+    def update_postbox_prams
+      params.require(:postbox).permit(:title, :description)
     end
 end
