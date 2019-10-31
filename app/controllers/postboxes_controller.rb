@@ -20,6 +20,11 @@ class PostboxesController < ApplicationController
     if @postbox.save
       redirect_to edit_postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を作成しました"
     else
+      puts "========"
+      puts "========"
+      puts "render"
+      puts "========"
+      puts "========"
       render :new
     end
   end

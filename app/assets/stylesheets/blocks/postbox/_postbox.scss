@@ -1,0 +1,23 @@
+@import "../../common";
+
+.postbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+
+  &__title {
+    margin-bottom: 10px;
+    width: 100%;
+    color: $font-main;
+    font-size: 22px;
+  }
+
+  &__description {
+    margin-bottom: 10px;
+    width: 100%;
+    color: $font-main;
+    font-size: 20px;
+  }
+}

@@ -1,14 +1,23 @@
 - @page_title = @postbox.title
 
-p = @postbox.title
-p = @postbox.description
-- if @postbox.is_published
-  p この投書箱に投稿した内容はURLを知っているすべての利用者が閲覧することができます。
-- else
-  p この投書箱に投稿した内容は管理者のみが閲覧することができます。
-= render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
-- if @postbox.is_published
-  p 投稿一覧
-  - @postbox.posts.each do |post|
-    p = post.content
-    p = post.created_at
+.postbox
+  p.postbox__title = @postbox.title
+  p.postbox__description = @postbox.description
+  .notice
+    - if @postbox.is_published
+      p.notice__text
+      |この投書箱に投稿した内容は
+      br
+      |URLを知っているすべての利用者が閲覧することができます。
+    - else
+      p.notice__text この投書箱に投稿した内容は管理者のみが閲覧することができます。
+  .post-form
+    = render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
+  - if @postbox.is_published
+    .posts
+      p.posts__title 投稿一覧
+      .posts__list
+        - @postbox.posts.each do |post|
+          .posts-item
+            p.posts-item__date = post.created_at.strftime("%Y/%m/%d %H:%M")
+            p.posts-item__content = post.content

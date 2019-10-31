@@ -1,0 +1,21 @@
+@import "../../common";
+
+.alert {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 14px;
+
+  &-success {
+    border: solid 1px $border-alert-success;
+    background-color: $background-alert-success;
+    color: $font-alert-success;
+  }
+
+  &-warning {
+    border: solid 1px $border-alert-warning;
+    background-color: $background-alert-warning;
+    color: $font-alert-warning;
+  }
+}

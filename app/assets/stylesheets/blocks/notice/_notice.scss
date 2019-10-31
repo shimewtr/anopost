@@ -1,0 +1,13 @@
+@import "../../common";
+
+.notice {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 80%;
+  width: 100%;
+  border: solid 1px $border-alert-info;
+  border-radius: 5px;
+  background-color: $background-alert-info;
+  color: $font-alert-info;
+  font-size: 14px;
+}
