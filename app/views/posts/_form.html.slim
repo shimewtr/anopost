@@ -1,5 +1,7 @@
 = form_with model: post, url: posts_path(uid: @postbox.uid), local: true do |f|
   .form-group
-    = f.label :content
-    = f.text_field :content
-  = f.submit "作成"
+    = f.label :content, class: "form__label"
+    = f.text_area :content, class: "form__text-area"
+
+  .form-group
+    = f.submit "作成", class: "form__button"
