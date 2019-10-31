@@ -13,10 +13,10 @@
     .form-group
       .form-check
         = f.radio_button :is_published, true
-        = f.label :is_publish_true, '公開'
+        = f.label :is_publish_true, "公開"
       .form-check
         = f.radio_button :is_published, false, checked: true
-        = f.label :is_publish_false, '非公開'
+        = f.label :is_publish_false, "非公開"
 
   .form-group
     = f.submit postbox_submit_label(from), class: "form__button"
