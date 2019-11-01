@@ -1,2 +1,6 @@
+- if @postbox.errors.any?
+  .alert.alert-warning
+    - @postbox.errors.full_messages.each do |msg|
+      p.alert__message = msg
 .postbox-form
   = render "form", from: :edit, url: edit_postbox_path, postbox: @postbox

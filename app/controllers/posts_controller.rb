@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to postbox_path(@postbox.uid), notice: "投稿しました"
     else
-      render "new"
+      redirect_to postbox_path(@postbox.uid), alert: @post.errors.full_messages_for(:content)
     end
   end
 

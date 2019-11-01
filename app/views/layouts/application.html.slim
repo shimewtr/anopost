@@ -11,7 +11,12 @@ html
     = render "header"
     .content
       - if flash.notice.present?
-        .alert.alert-success = flash.notice
+        .alert.alert-success
+          = flash.notice
+      - if flash.alert.present?
+        .alert.alert-warning
+          - flash.alert.each do |alert|
+            = alert
       = yield
     = render "footer"
     - if Rails.env.development?

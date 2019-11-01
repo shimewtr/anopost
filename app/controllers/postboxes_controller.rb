@@ -18,13 +18,8 @@ class PostboxesController < ApplicationController
     @postbox = Postbox.new(postbox_prams)
     @postbox.uid = SecureRandom.urlsafe_base64(20)
     if @postbox.save
-      redirect_to edit_postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を作成しました"
+      redirect_to postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を作成しました"
     else
-      puts "========"
-      puts "========"
-      puts "render"
-      puts "========"
-      puts "========"
       render :new
     end
   end
@@ -33,8 +28,11 @@ class PostboxesController < ApplicationController
   end
 
   def update
-    @postbox.update!(update_postbox_prams)
-    redirect_to edit_postbox_path(@postbox), notice: "#{@postbox.title}を更新しました"
+    if @postbox.update(update_postbox_prams)
+      redirect_to postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を更新しました"
+    else
+      render :edit
+    end
   end
 
   def destroy
