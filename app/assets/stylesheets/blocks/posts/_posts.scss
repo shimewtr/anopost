@@ -27,6 +27,9 @@
 
   &__content {
     color: $font-main;
+    word-wrap: break-word;
     line-height: 16px;
+
+    overflow-wrap: break-word;
   }
 }
