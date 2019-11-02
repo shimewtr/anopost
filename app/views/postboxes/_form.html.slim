@@ -17,6 +17,11 @@
       .form-check
         = f.radio_button :is_published, false, checked: true
         = f.label :is_publish_false, "非公開"
-
+    .form-group
+        = f.label :password, class: "form__label"
+        = f.password_field :password, class: "form__text-field"
+    .form-group
+        = f.label :password_confirmation, class: "form__label"
+        = f.password_field :password_confirmation, class: "form__text-field"
   .form-group
     = f.submit postbox_submit_label(from), class: "form__button"
