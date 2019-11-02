@@ -12,6 +12,8 @@ class PostboxesTest < ApplicationSystemTestCase
     visit root_path
     fill_in "postbox_title", with: "投書箱のタイトル"
     fill_in "postbox_description", with: "投書箱の説明テキスト"
+    fill_in "postbox_password", with: "123456"
+    fill_in "postbox_password_confirmation", with: "123456"
     click_button "作成"
     assert_text "投書箱のタイトルを作成しました"
   end

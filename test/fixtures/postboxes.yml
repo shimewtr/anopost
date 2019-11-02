@@ -4,6 +4,7 @@ postbox_1:
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
   is_published: false
+  password_digest: $2a$12$bFCvoA.dWA/Jg8M4lOYWzOQyiHynGVr..VkeRzV7LFBgMtjO9KrbW
 
 published_postbox:
   id: 100
@@ -11,6 +12,7 @@ published_postbox:
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
   is_published: true
+  password_digest: $2a$12$bFCvoA.dWA/Jg8M4lOYWzOQyiHynGVr..VkeRzV7LFBgMtjO9KrbW
 
 unpublished_postbox:
   id: 101
@@ -18,3 +20,4 @@ unpublished_postbox:
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
   is_published: false
+  password_digest: $2a$12$bFCvoA.dWA/Jg8M4lOYWzOQyiHynGVr..VkeRzV7LFBgMtjO9KrbW
