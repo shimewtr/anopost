@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :postboxes, param: :uid
   resources :posts
+
+  post "/login", to: "sessions#create"
 end

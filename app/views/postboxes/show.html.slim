@@ -1,5 +1,12 @@
 - @page_title = @postbox.title
 
+.login-form
+  .form-group
+  = form_with url: login_path(uid: @postbox.uid), local: true do |f|
+    = f.label "password", class: "form__label"
+    = f.password_field :password, class: "form__text-field"
+    = f.submit "login", class: "form__button"
+
 .postbox
   p.postbox__title = @postbox.title
   p.postbox__description = @postbox.description
