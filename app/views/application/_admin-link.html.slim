@@ -1,0 +1,8 @@
+.admin-link-box
+  input#admin-link type="checkbox"
+  label.admin-link__text for="admin-link"
+  .hidden-admin-form
+    = form_with url: login_path(uid: @postbox.uid), local: true do |f|
+      = f.label "パスワード", class: "form__label"
+      = f.password_field :password, class: "form__text-field"
+      = f.submit "login", class: "form__button"

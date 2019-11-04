@@ -1,0 +1,61 @@
+@import "../../common";
+
+.admin-link-box {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden-admin-form {
+  position: absolute;
+  width: 200px;
+}
+
+.admin-link__text {
+  right: 0;
+  display: flex;
+  align-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1px;
+  height: 100%;
+}
+
+.admin-link__text::after {
+  position: absolute;
+  z-index: 30;
+  display: block;
+  color: $font-sub;
+  content: "管理者ログイン";
+  font-size: $font-admin-link;
+  cursor: pointer;
+}
+
+#admin-link:checked+.admin-link__text::after {
+  content: "閉じる";
+}
+
+#admin-link {
+  display: none;
+}
+
+.admin-link-box .hidden-admin-form {
+  top: 30px;
+  right: 200px;
+  overflow: hidden;
+  padding: 0;
+  padding: 5px;
+  height: 0;
+  border: 1px solid $border;
+  background-color: $background;
+  opacity: 0;
+}
+
+.admin-link-box input:checked~.hidden-admin-form {
+  height: auto;
+  opacity: 1;
+}

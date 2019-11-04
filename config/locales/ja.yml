@@ -12,7 +12,12 @@ ja:
   activerecord:
     models:
       postbox: 投書箱
+      post: 投稿
     attributes:
       postbox:
         title: 名前
         description: 説明
+        password: パスワード
+        password_confirmation: パスワード(確認)
+      post:
+        content: 投稿内容

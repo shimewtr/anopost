@@ -1,12 +1,5 @@
 - @page_title = @postbox.title
 
-.login-form
-  .form-group
-  = form_with url: login_path(uid: @postbox.uid), local: true do |f|
-    = f.label "password", class: "form__label"
-    = f.password_field :password, class: "form__text-field"
-    = f.submit "login", class: "form__button"
-
 .postbox
   p.postbox__title = @postbox.title
   p.postbox__description = @postbox.description
@@ -20,11 +13,5 @@
       p.notice__text この投書箱に投稿した内容は管理者のみが閲覧することができます。
   .post-form
     = render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
-  - if @postbox.is_published
-    .posts
-      p.posts__title 投稿一覧
-      .posts__list
-        - @postbox.posts.each do |post|
-          .posts-item
-            p.posts-item__date = post.created_at.strftime("%Y/%m/%d %H:%M")
-            p.posts-item__content = post.content
+  - if @postbox.is_published || (@postbox == current_postbox)
+    = render "posts"

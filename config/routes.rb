@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   root to: "postboxes#new"
 
+  get "/:uid", to: "postboxes#show"
+
   resources :postboxes, param: :uid
   resources :posts
 
