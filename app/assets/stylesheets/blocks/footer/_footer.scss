@@ -43,7 +43,11 @@
 
   &__item {
     display: inline;
+  }
+
+  &__text {
     color: $font-footer;
+    text-decoration: none;
     font-size: $font-footer-link;
   }
 }
