@@ -4,9 +4,10 @@
     label.admin-link__text for="admin-link"
     .hidden-admin-form
       = form_with url: session_login_path(uid: @postbox.uid), local: true do |f|
-        = f.label "パスワード", class: "form__label"
-        = f.password_field :password, class: "form__text-field"
-        = f.submit "login", class: "form__button"
+        .hidden-admin-form__form-group
+          = f.label "パスワード", class: "hidden-admin-form__label"
+          = f.password_field :password, class: "hidden-admin-form__text-field"
+          = f.submit "login", class: "hidden-admin-form__button"
   - else
-    = link_to "ログアウト", session_logout_path, method: :delete
-    = link_to "管理者ページ", edit_postbox_path(uid: @postbox.uid)
+    = link_to "ログアウト", session_logout_path, method: :delete, class: "admin-link-box__text"
+    = link_to "管理者ページ", edit_postbox_path(uid: @postbox.uid), class: "admin-link-box__text"
