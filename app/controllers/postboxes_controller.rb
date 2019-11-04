@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class PostboxesController < ApplicationController
-  before_action :set_postbox, only: [:show, :edit, :update, :destroy]
+  include SessionsHelper
+
+  before_action :set_postbox, only: [:show, :edit, :update]
+  before_action :require_admin_login, only: [:edit, :update]
 
   def index
     @postboxes = Postbox.all
@@ -54,5 +57,15 @@ class PostboxesController < ApplicationController
 
     def update_postbox_prams
       params.require(:postbox).permit(:title, :description)
+    end
+
+    def require_admin_login
+      unless admin_login?
+        redirect_to root_path, alert: ["管理者としてログインしてください"]
+      end
+    end
+
+    def admin_login?
+      logged_in? && @postbox.uid == session[:postbox]
     end
 end

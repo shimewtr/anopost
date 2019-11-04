@@ -21,4 +21,18 @@ class SessionsTest < ApplicationSystemTestCase
     click_button "login"
     assert_text "管理者としてログインしました。"
   end
+
+  test "管理者ログインしていないと更新ページにいけないか" do
+    visit edit_postbox_path(@postbox)
+    assert_text "管理者としてログインしてください"
+
+    visit postbox_path(@postbox)
+    find(".admin-link__text").click
+    fill_in "password", with: "123456"
+    click_button "login"
+    assert_text "管理者としてログインしました。"
+
+    visit edit_postbox_path(@postbox)
+    assert_text "名前"
+  end
 end

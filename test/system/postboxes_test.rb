@@ -19,6 +19,12 @@ class PostboxesTest < ApplicationSystemTestCase
   end
 
   test "投書箱が正しく更新できるか" do
+    visit postbox_path(postboxes(:postbox_1))
+    find(".admin-link__text").click
+    fill_in "password", with: "123456"
+    click_button "login"
+    assert_text "管理者としてログインしました。"
+
     visit edit_postbox_path(postboxes(:postbox_1))
     fill_in "postbox_title", with: "更新後のタイトル"
     fill_in "postbox_description", with: "更新後の説明テキスト"

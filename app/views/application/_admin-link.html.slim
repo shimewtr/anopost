@@ -1,8 +1,12 @@
 .admin-link-box
-  input#admin-link type="checkbox"
-  label.admin-link__text for="admin-link"
-  .hidden-admin-form
-    = form_with url: login_path(uid: @postbox.uid), local: true do |f|
-      = f.label "パスワード", class: "form__label"
-      = f.password_field :password, class: "form__text-field"
-      = f.submit "login", class: "form__button"
+  - if @postbox != current_postbox
+    input#admin-link type="checkbox"
+    label.admin-link__text for="admin-link"
+    .hidden-admin-form
+      = form_with url: session_login_path(uid: @postbox.uid), local: true do |f|
+        = f.label "パスワード", class: "form__label"
+        = f.password_field :password, class: "form__text-field"
+        = f.submit "login", class: "form__button"
+  - else
+    = link_to "ログアウト", session_logout_path, method: :delete
+    = link_to "管理者ページ", edit_postbox_path(uid: @postbox.uid)

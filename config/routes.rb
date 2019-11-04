@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :postboxes, param: :uid
   resources :posts
 
-  post "/login", to: "sessions#create"
+  post "/session/login", to: "sessions#create"
+  delete "/session/logout", to: "sessions#destroy"
 end

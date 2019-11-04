@@ -12,7 +12,11 @@ module SessionsHelper
   end
 
   def log_out
-    session.delete(:user_id)
-    @current_user = nil
+    session.delete(:postbox)
+    @current_postbox = nil
+  end
+
+  def logged_in?
+    !current_postbox.nil?
   end
 end
