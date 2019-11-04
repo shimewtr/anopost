@@ -30,4 +30,12 @@
 
     overflow-wrap: break-word;
   }
+
+  &__none-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: $font-sub;
+  }
 }
