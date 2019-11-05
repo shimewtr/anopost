@@ -11,7 +11,7 @@ class Postbox < ApplicationRecord
   validates :title,  presence: { message: "を入力してください。" },
             length: { maximum: 100, too_long: "は最大40文字まで入力できます。" }
   validates :description,  presence: { message: "を入力してください。" },
-            length: { maximum: 200, too_long: "説明文は最大200文字まで入力できます。" }
+            length: { maximum: 200, too_long: "は最大200文字まで入力できます。" }
   validates :is_published,  inclusion: { in: [true, false] }
   validates :slack_webhook_url,
             format: {
