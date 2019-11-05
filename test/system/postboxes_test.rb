@@ -26,6 +26,7 @@ class PostboxesTest < ApplicationSystemTestCase
     assert_text "管理者としてログインしました。"
 
     visit edit_postbox_path(postboxes(:postbox_1))
+    find(".edit-tab__item-form").click
     fill_in "postbox_title", with: "更新後のタイトル"
     fill_in "postbox_description", with: "更新後の説明テキスト"
     fill_in "postbox_slack_webhook_url", with: "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"

@@ -33,6 +33,6 @@ class SessionsTest < ApplicationSystemTestCase
     assert_text "管理者としてログインしました。"
 
     visit edit_postbox_path(@postbox)
-    assert_text "名前"
+    assert_text "投稿一覧"
   end
 end

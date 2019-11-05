@@ -2,5 +2,13 @@
   .alert.alert-warning
     - @postbox.errors.full_messages.each do |msg|
       p.alert__message = msg
-.postbox-form
-  = render "form", from: :edit, url: edit_postbox_path, postbox: @postbox
+.edit-tab
+  input#posts-tab type="radio" name="edit-tab__item" checked=true
+  label.edit-tab__item.edit-tab__item-posts for="posts-tab" 投稿一覧
+  input#form-tab type="radio" name="edit-tab__item"
+  label.edit-tab__item.edit-tab__item-form for="form-tab" 設定
+  #posts-tab__content.edit-tab__content
+    = render "posts"
+  #form-tab__content.edit-tab__content
+    .postbox-form
+      = render "form", from: :edit, url: edit_postbox_path, postbox: @postbox
