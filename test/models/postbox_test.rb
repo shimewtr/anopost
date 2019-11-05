@@ -14,9 +14,9 @@ class PostboxTest < ActiveSupport::TestCase
     assert @postbox.valid?
     @postbox.title = "abc123!_-=あア亜"
     assert @postbox.valid?
-    @postbox.title = "あ" * 40
+    @postbox.title = "あ" * 100
     assert @postbox.valid?
-    @postbox.title = "あ" * 41
+    @postbox.title = "あ" * 101
     assert @postbox.invalid?
   end
 
