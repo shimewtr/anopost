@@ -56,7 +56,7 @@ class PostboxesController < ApplicationController
     end
 
     def update_postbox_prams
-      params.require(:postbox).permit(:title, :description)
+      params.require(:postbox).permit(:title, :description, :slack_webhook_url)
     end
 
     def require_admin_login

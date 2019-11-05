@@ -19,9 +19,20 @@
         = f.label :is_publish_false, "非公開"
     .form-group
         = f.label :password, class: "form__label"
+        p.form__sub-label
+          |6文字以上のパスワードを入力してください。
+          br
+          |パスワードを知っている方はすべての投稿を確認できます。
         = f.password_field :password, class: "form__text-field"
     .form-group
         = f.label :password_confirmation, class: "form__label"
         = f.password_field :password_confirmation, class: "form__text-field"
+
+  - if from == :edit
+    .form-group
+        = f.label :slack_webhook_url, class: "form__label"
+        p.form__sub-label 投稿された内容をSlackにも通知することができます。公開範囲にご注意ください。
+        = f.text_field :slack_webhook_url, class: "form__text-field"
+
   .form-group
     = f.submit postbox_submit_label(from), class: "form__button"

@@ -185,6 +185,7 @@ GEM
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    slack-notifier (2.3.2)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -258,6 +259,7 @@ DEPENDENCIES
   rubocop-performance
   sass-rails (~> 5)
   selenium-webdriver
+  slack-notifier
   slim-rails
   slim_lint
   spring

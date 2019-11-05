@@ -14,6 +14,12 @@ class Postbox < ApplicationRecord
   validates :description,  presence: { message: "が入力が必要です。" },
             length: { maximum: 200, too_long: "説明文は最大200文字まで入力できます。" }
   validates :is_published,  inclusion: { in: [true, false] }
+  validates :slack_webhook_url,
+            format: {
+                      allow_blank: true,
+                      with: /\Ahttps:\/\/hooks\.slack\.com\/services\/.*/,
+                      message: "の形式が正しくありません。"
+                    }
 
   has_many :posts
 
