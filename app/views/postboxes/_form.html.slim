@@ -34,5 +34,7 @@
         p.form__sub-label 投稿された内容をSlackにも通知することができます。公開範囲にご注意ください。
         = f.text_field :slack_webhook_url, class: "form__text-field"
 
-  .form-group
+  .form-button-group
     = f.submit postbox_submit_label(from), class: "form__button"
+    - if from == :edit
+      = link_to "削除", postbox_path, method: :delete, data: { confirm: "投書箱を削除してよろしいですか？" }, class: "form__delete-button"

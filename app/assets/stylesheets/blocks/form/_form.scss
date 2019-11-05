@@ -27,6 +27,15 @@ form {
   width: 100%;
 }
 
+.form-button-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
 .field_with_errors {
   display: flex;
   align-items: center;
@@ -107,6 +116,23 @@ form {
     border-radius: 5px;
     background-color: $main;
     color: white;
+    font-size: $font-button;
+    cursor: pointer;
+
+    @include button-shadow(2px);
+  }
+
+  &__delete-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.25rem;
+    width: $width-button;
+    height: $height-button;
+    border-radius: 5px;
+    background-color: $button-warning;
+    color: white;
+    text-decoration: none;
     font-size: $font-button;
     cursor: pointer;
 

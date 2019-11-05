@@ -3,8 +3,8 @@
 class PostboxesController < ApplicationController
   include SessionsHelper
 
-  before_action :set_postbox, only: [:show, :edit, :update]
-  before_action :require_admin_login, only: [:edit, :update]
+  before_action :set_postbox, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin_login, only: [:edit, :update, :destroy]
 
   def index
     @postboxes = Postbox.all
@@ -40,6 +40,7 @@ class PostboxesController < ApplicationController
 
   def destroy
     @postbox.destroy
+    redirect_to root_path, notice: "#{@postbox.title}を削除しました"
   end
 
   def to_param
