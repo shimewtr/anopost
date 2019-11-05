@@ -2,14 +2,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 3.75rem;
 
     &__icon {
-        width: 180px;
-        height: 180px;
+        margin-bottom: 1.375rem;
+        width: $width-introduction-icon;
+        height: $height-introduction-icon;
     }
 
     &__text {
-        margin-top: 35px;
         color: $font-main;
         text-align: center;
         font-weight: normal;

@@ -7,4 +7,4 @@
       - @postbox.posts.each do |post|
         .posts-item
           p.posts-item__date = post.created_at.strftime("%Y/%m/%d %H:%M")
-          p.posts-item__content = post.content
+          = simple_format(post.content, class: "posts-item__content")

@@ -1,7 +1,8 @@
 .header {
   display: flex;
   justify-content: center;
-  height: 40px;
+  width: 100%;
+  height: $height-header;
   border-bottom: 1px solid $border;
 
   &__content {
@@ -18,12 +19,11 @@
 .header-logo {
   display: flex;
   align-items: center;
-  width: 50%;
   height: 100%;
 
   &__icon {
-    width: 35px;
-    height: 35px;
+    width: $width-header-logo;
+    height: $height-header-logo;
   }
 
   &__app-name {

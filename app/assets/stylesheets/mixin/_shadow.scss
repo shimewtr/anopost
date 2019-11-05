@@ -1,0 +1,7 @@
+@mixin form-forcus-box-shadow($color) {
+  box-shadow: rgba($color, 1) 0 0 .375rem
+}
+
+@mixin button-shadow($size) {
+  filter: drop-shadow($size $size $size rgba(0, 0, 0, 0.2));
+}
