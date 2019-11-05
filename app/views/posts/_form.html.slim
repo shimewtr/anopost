@@ -1,6 +1,7 @@
-= form_with model: @post, url: posts_path(uid: @postbox.uid) do |f|
+= form_with model: post, url: posts_path(uid: @postbox.uid) do |f|
   .form-group
-    = f.label :content, class: "form__label"
+    = f.label "投稿内容", class: "form__label"
+    p.form__sub-label 投稿内容を入力してください。(最大200文字)
     = f.text_area :content, class: "form__text-area"
 
   .form-group

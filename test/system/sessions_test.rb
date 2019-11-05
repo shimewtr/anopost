@@ -18,7 +18,7 @@ class SessionsTest < ApplicationSystemTestCase
     visit postbox_path(@postbox)
     find(".admin-link__text").click
     fill_in "password", with: "123456"
-    click_button "login"
+    click_button "ログイン"
     assert_text "管理者としてログインしました。"
   end
 
@@ -29,7 +29,7 @@ class SessionsTest < ApplicationSystemTestCase
     visit postbox_path(@postbox)
     find(".admin-link__text").click
     fill_in "password", with: "123456"
-    click_button "login"
+    click_button "ログイン"
     assert_text "管理者としてログインしました。"
 
     visit edit_postbox_path(@postbox)
