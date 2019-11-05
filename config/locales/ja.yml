@@ -19,5 +19,6 @@ ja:
         description: 説明
         password: パスワード
         password_confirmation: パスワード(確認)
+        slack_webhook_url: Slack Incoming Webhook
       post:
         content: 投稿内容
