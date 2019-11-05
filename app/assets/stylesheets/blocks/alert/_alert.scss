@@ -1,9 +1,10 @@
 .alert {
   box-sizing: border-box;
-  padding: 15px;
-  width: 80%;
-  border-radius: 5px;
-  font-size: 14px;
+  margin-bottom: 1.875rem;
+  padding: $padding-alert-notice;
+  width: 100%;
+  border-radius: $border-alert-notice;
+  font-size: $font-alert-notice;
 
   &-success {
     border: solid 1px $border-alert-success;

@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 20px;
     width: $width-footer-content;
     height: 100%;
     border-top: 1px solid $border;
@@ -20,7 +21,7 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 
   &__icon {
     width: 40px;
@@ -38,7 +39,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-bottom: 20px;
   width: 400px;
 
   &__item {
@@ -57,16 +58,16 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
   text-decoration: none;
 }
 
 .footer-copy {
+  margin-bottom: 5px;
   color: $font-footer;
   font-size: $font-footer-link;
 }
 
 .footer-icon {
-  margin-top: 5px;
-  color: $font-footer
+  color: $font-footer;
+  font-size: $font-footer-link;
 }

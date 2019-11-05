@@ -1,11 +1,36 @@
 $width-main-content: 600px;
-$width-footer-content: 1000px;
+$width-footer-content: 700px;
 
-$height-header: 40px;
+$height-header: 2.5rem;
 
-$font-header-logo: 22px;
-$font-admin-link: 12px;
-$font-introduction-text: 22px;
-$font-footer-link: 14px;
+$height-form-text-field: 1.875rem;
+$height-form-text-area: 3.75rem;
 
-$line-height-introduction-text: 36px;
+$width-button: 7.5rem;
+$height-button: 3.75rem;
+
+$width-header-logo: 2.375rem;
+$height-header-logo: 2.375rem;
+
+$width-introduction-icon: 11.25rem;
+$height-introduction-icon: 11.25rem;
+
+$width-admin-link: 12.5rem;
+
+$font-header-logo: 1.375rem;
+$font-admin-link: 0.75rem;
+$font-introduction-text: 1.375rem;
+$font-footer-link: 0.875rem;
+$font-form-label: 1rem;
+$font-form-sub-label: 0.75rem;
+$font-form-text-field: 0.75rem;
+$font-button: 1.25rem;
+$font-alert-notice: 0.875rem;
+
+$line-height-introduction-text: 1.75rem;
+
+$border-form: 2px;
+$border-radius-form: 0.25rem;
+$border-alert-notice: 0.25rem;
+
+$padding-alert-notice: 0.875rem;
