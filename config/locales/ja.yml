@@ -22,3 +22,9 @@ ja:
         slack_webhook_url: Slack Incoming Webhook
       post:
         content: 投稿内容
+    errors:
+      models:
+        postbox:
+          attributes:
+            password_confirmation:
+              confirmation: が一致しません。

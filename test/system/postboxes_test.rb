@@ -18,6 +18,26 @@ class PostboxesTest < ApplicationSystemTestCase
     assert_text "投書箱のタイトルを作成しました"
   end
 
+  test "投書箱のパスワードが異なるとエラーメッセージが正しく表示されるか" do
+    visit root_path
+    fill_in "postbox_title", with: "投書箱のタイトル"
+    fill_in "postbox_description", with: "投書箱の説明テキスト"
+    fill_in "postbox_password", with: "1234"
+    fill_in "postbox_password_confirmation", with: "1234"
+    click_button "作成"
+    assert_text "パスワード は6文字以上40文字以下で入力してください。"
+
+    fill_in "postbox_password", with: "1" * 41
+    fill_in "postbox_password_confirmation", with:  "1" * 41
+    click_button "作成"
+    assert_text "パスワード は6文字以上40文字以下で入力してください。"
+
+    fill_in "postbox_password", with: "123456"
+    fill_in "postbox_password_confirmation", with: "654321"
+    click_button "作成"
+    assert_text "パスワード(確認) が一致しません。"
+  end
+
   test "投書箱が正しく更新できるか" do
     visit postbox_path(postboxes(:postbox_1))
     find(".admin-link__text").click
