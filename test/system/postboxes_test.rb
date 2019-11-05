@@ -53,4 +53,19 @@ class PostboxesTest < ApplicationSystemTestCase
     click_button "更新"
     assert_text "更新後のタイトルを更新しました"
   end
+
+  test "投書箱が正しく削除できるか" do
+    visit postbox_path(postboxes(:postbox_1))
+    find(".admin-link__text").click
+    fill_in "password", with: "123456"
+    click_button "ログイン"
+    assert_text "管理者としてログインしました。"
+
+    visit edit_postbox_path(postboxes(:postbox_1))
+    find(".edit-tab__item-form").click
+    accept_confirm do
+      click_link "削除"
+    end
+    assert_text "テストのポストボックスを削除しました"
+  end
 end
