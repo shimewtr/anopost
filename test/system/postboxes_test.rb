@@ -88,7 +88,7 @@ class PostboxesTest < ApplicationSystemTestCase
     assert_text "管理者としてログインしました。"
 
     visit edit_postbox_path(postboxes(:postbox_1))
-    click_link "戻る"
+    click_link "投書箱に戻る"
     assert_text "テストのポストボックス"
     assert_text "このポストボックスはテスト用です。"
     assert_text "投稿内容"
