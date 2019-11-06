@@ -68,4 +68,29 @@ class PostboxesTest < ApplicationSystemTestCase
     end
     assert_text "テストのポストボックスを削除しました"
   end
+
+  test "ログアウトが正常にできるか" do
+    visit postbox_path(postboxes(:postbox_1))
+    find(".admin-link__text").click
+    fill_in "password", with: "123456"
+    click_button "ログイン"
+    assert_text "管理者としてログインしました。"
+
+    click_link "ログアウト"
+    assert_text "ログアウトしました。"
+  end
+
+  test "管理者ページのヘッダーが正しく機能するか" do
+    visit postbox_path(postboxes(:postbox_1))
+    find(".admin-link__text").click
+    fill_in "password", with: "123456"
+    click_button "ログイン"
+    assert_text "管理者としてログインしました。"
+
+    visit edit_postbox_path(postboxes(:postbox_1))
+    click_link "戻る"
+    assert_text "テストのポストボックス"
+    assert_text "このポストボックスはテスト用です。"
+    assert_text "投稿内容"
+  end
 end
