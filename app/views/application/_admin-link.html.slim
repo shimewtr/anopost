@@ -9,8 +9,8 @@
           = f.password_field :password, class: "hidden-admin-form__text-field"
           = f.submit "ログイン", class: "hidden-admin-form__button"
   - else
-    = link_to "ログアウト", session_logout_path, method: :delete, class: "admin-link-box__text"
     - if controller.controller_name == "postboxes" && controller.action_name == "edit"
-      = link_to "戻る", postbox_path(uid: @postbox.uid), class: "admin-link-box__text"
+      = link_to "投書箱に戻る", postbox_path(uid: @postbox.uid), class: "admin-link-box__text"
     - else
       = link_to "管理者ページ", edit_postbox_path(uid: @postbox.uid), class: "admin-link-box__text"
+    = link_to "ログアウト", session_logout_path, method: :delete, class: "admin-link-box__text"
