@@ -2,8 +2,15 @@
 
 .postbox
   p.postbox__title = @postbox.title
-  = simple_format(@postbox.description, class: "postbox__description")
+  p.postbox__description = safe_join(@postbox.description.split("\n"), tag(:br))
 .notice
-  p.notice__text この投書箱に投稿した内容は管理者のみが閲覧することができます。
+  p.notice__text
+    |投稿した内容は投書箱を作成した管理者のみが閲覧することができます。
+    br
+    |当サイトは投稿者の個人情報は保存しておりません。
+    br
+    |「発信者情報開示」の要請があった場合などを除き、発信者のIPアドレスなど
+    br
+    |各種個人情報を開示することはありません。
 .post-form
   = render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
