@@ -3,7 +3,6 @@ postbox_1:
   uid: jPnI0mCqv8LIPyGY9xXrIWiZadg
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
-  is_published: false
   password_digest: $2a$12$9fClZs15CaxWktF1Wm5Q2.u.spqlvxl0UPUp8XPq8BXgccVioeAVO #123456
 
 published_postbox:
@@ -11,7 +10,6 @@ published_postbox:
   uid: D7apaq6Rb7iv64YjOE0Ay84zTNo
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
-  is_published: true
   password_digest: $2a$12$9fClZs15CaxWktF1Wm5Q2.u.spqlvxl0UPUp8XPq8BXgccVioeAVO #123456
 
 unpublished_postbox:
@@ -19,5 +17,4 @@ unpublished_postbox:
   uid: D7apaq6Rb7iv64YjOE0Ay84zTN0
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
-  is_published: false
   password_digest: $2a$12$bFCvoA.dWA/Jg8M4lOYWzOQyiHynGVr..VkeRzV7LFBgMtjO9KrbW
