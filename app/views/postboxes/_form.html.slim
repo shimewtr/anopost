@@ -11,13 +11,6 @@
 
   - if from == :new
     .form-group
-      .form-check
-        = f.radio_button :is_published, true
-        = f.label :is_publish_true, "公開"
-      .form-check
-        = f.radio_button :is_published, false, checked: true
-        = f.label :is_publish_false, "非公開"
-    .form-group
         = f.label :password, class: "form__label"
         p.form__sub-label
           |6文字以上のパスワードを入力してください。(最大40文字)

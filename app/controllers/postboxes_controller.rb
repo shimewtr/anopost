@@ -53,7 +53,7 @@ class PostboxesController < ApplicationController
     end
 
     def postbox_prams
-      params.require(:postbox).permit(:title, :description, :is_published, :password, :password_confirmation)
+      params.require(:postbox).permit(:title, :description, :password, :password_confirmation)
     end
 
     def update_postbox_prams
