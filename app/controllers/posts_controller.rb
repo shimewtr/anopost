@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = @postbox.posts.build(post_prams)
     if @post.save
       notify_to_slack(@postbox, @post)
-      redirect_to postbox_path(@postbox.uid), notice: "投稿しました"
+      redirect_to postbox_path(@postbox.uid), notice: "入力した内容を投稿しました。投稿内容は投書箱を作成した管理者のみが閲覧できます。"
     else
       redirect_to postbox_path(@postbox.uid), alert: @post.errors.full_messages_for(:content)
     end
