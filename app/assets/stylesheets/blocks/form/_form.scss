@@ -120,6 +120,13 @@ form {
     cursor: pointer;
 
     @include button-shadow(2px);
+
+    &--posts {
+      font-size: $font-button--posts;
+
+      @extend .form__button;
+
+    }
   }
 
   &__delete-button {
