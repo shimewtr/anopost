@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @postbox = Postbox.find_by(uid: params[:uid])
+    @postbox = Postbox.find_by(uid: params[:postbox_uid])
     @post = @postbox.posts.build(post_prams)
     if @post.save
       notify_to_slack(@postbox, @post)

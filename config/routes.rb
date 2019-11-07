@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get "/postboxes", to: "postboxes#new"
   get "/:uid", to: "postboxes#show"
 
-  resources :postboxes, param: :uid
-  resources :posts
+  resources :postboxes, param: :uid, only: [:show, :create, :destroy, :edit, :update] do
+    resources :posts, only: [:index, :create]
+  end
 
   post "/session/login", to: "sessions#create"
   delete "/session/logout", to: "sessions#destroy"
