@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_11_06_131358) do
 
-  create_table "postboxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "postboxes", force: :cascade do |t|
     t.string "uid"
     t.string "title"
     t.text "description"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_131358) do
     t.string "slack_webhook_url"
   end
 
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.text "content"
     t.integer "postbox_id"
     t.datetime "created_at", precision: 6, null: false
