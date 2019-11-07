@@ -13,4 +13,4 @@
     br
     |各種個人情報を開示することはありません。
 .post-form
-  = render "/posts/form", from: :new, url: posts_path(uid: @postbox.uid), post: @post
+  = render "/posts/form", from: :new, url: postbox_posts_path(postbox_uid: @postbox.uid), post: @post
