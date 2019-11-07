@@ -15,8 +15,8 @@ ja:
       post: 投稿
     attributes:
       postbox:
-        title: 名前
-        description: 説明
+        title: 投書箱の名前
+        description: 投書箱の説明文
         password: パスワード
         password_confirmation: パスワード(確認)
         slack_webhook_url: Slack Incoming Webhook
