@@ -1,24 +1,34 @@
-# README
+# AnoPost
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![AnoPostロゴ](https://github.com/wawawatataru/anopost/blob/master/app/assets/images/android-chrome-256x256.png?raw=true,"AnoPostロゴ")
 
-Things you may want to cover:
+## AnoPostとは
 
-* Ruby version
+`AnoPost` というサービスは、
+`社内の不正や倫理的な問題を通報したいけど身バレしたくない問題`を解決したい
+`匿名で通報をしたい社員と問題を未然に防ぎたい会社`向けの、
+`企業倫理ホットライン作成サービス`です。
+ユーザーは `匿名で不正や倫理的な問題の通報`ができ、
+`匿名質問箱や既存のホットライン作成サービス`とは違って、
+`アカウント登録や利用料金なしにすぐさま企業倫理ホットラインを作成できる機能`が備わっている事が特徴です。
 
-* System dependencies
+## Lint&Test
+下記のlintとテストが実装されます。
 
-* Configuration
+```
+$ ./bin/before_commit
+```
 
-* Database creation
+## Lint
+rubocopとslim-lintが実行されます。
 
-* Database initialization
+```
+$ ./bin/lint
+```
 
-* How to run the test suite
+## Test
+modelのテストとsystemテストが実行されます。
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ ./bin/test
+```
