@@ -43,3 +43,46 @@
     color: $font-sub;
   }
 }
+
+.export-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.75rem;
+  padding-left: 1.1875rem;
+}
+
+.export-button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 0.8125rem;
+  width: 4.5rem;
+  height: 1.5rem;
+  border-radius: $border-radius-button;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0.375rem;
+  text-decoration: none;
+
+  &--csv {
+    background-color: $button-export-csv;
+
+    @extend .export-button;
+  }
+
+  &--json {
+    background-color: $button-export-json;
+
+    @extend .export-button;
+  }
+
+  &__icon {
+    margin-right: 0.25rem;
+    color: $background;
+    font-size: 0.75rem;
+  }
+
+  &__text {
+    color: $background;
+    font-size: 0.75rem;
+  }
+}
