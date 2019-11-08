@@ -17,6 +17,16 @@ module SessionsHelper
   end
 
   def logged_in?
-    !current_postbox.nil?
+    current_postbox.present?
+  end
+
+  def require_admin_login
+    unless admin_login?
+      redirect_to root_path, alert: ["管理者としてログインしてください"]
+    end
+  end
+
+  def admin_login?
+    logged_in? && @postbox.uid == session[:postbox]
   end
 end

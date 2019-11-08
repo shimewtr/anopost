@@ -59,14 +59,4 @@ class PostboxesController < ApplicationController
     def update_postbox_prams
       params.require(:postbox).permit(:title, :description, :slack_webhook_url)
     end
-
-    def require_admin_login
-      unless admin_login?
-        redirect_to root_path, alert: ["管理者としてログインしてください"]
-      end
-    end
-
-    def admin_login?
-      logged_in? && @postbox.uid == session[:postbox]
-    end
 end
