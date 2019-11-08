@@ -1,0 +1,14 @@
+{
+  "name": "AnoPost",
+  "description": "Web service to create anonymous postbox",
+  "website": "https://github.com/wawawatataru/anopost",
+  "repository": "https://github.com/wawawatataru/anopost",
+  "logo": "https://github.com/wawawatataru/anopost/blob/master/app/assets/images/android-chrome-256x256.png?raw=true",
+  "success_url": "/",
+  "keywords": [
+    "postbox"
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
