@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   delete "/session/logout", to: "sessions#destroy"
 
   get "/static_pages/about", to: "static_pages#about"
-  get "/static_pages/tos", to: "static_pages#tos"
   get "/static_pages/privacy", to: "static_pages#privacy"
+  get "/static_pages/discramer", to: "static_pages#discramer"
 end

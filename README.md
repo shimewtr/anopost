@@ -2,7 +2,7 @@
 
 ![AnoPostロゴ](https://github.com/wawawatataru/anopost/blob/master/app/assets/images/android-chrome-256x256.png?raw=true,"AnoPostロゴ")
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/wawawatataru/anopost&env[RAIS_ENV]=production)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/wawawatataru/anopost)
 
 [![CircleCI](https://circleci.com/gh/wawawatataru/anopost.svg?style=svg)](https://circleci.com/gh/wawawatataru/anopost)
 
