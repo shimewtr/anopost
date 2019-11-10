@@ -2,7 +2,8 @@
   .form-group
     = f.label "投稿内容", class: "form__label"
     p.form__sub-label 投稿内容を入力してください。(最大200文字)
-    = f.text_area :content, class: "form__text-area"
+    = f.text_area :content, class: "form__text-area js-count-form", maxLength: "200"
+    p.js-count-text
 
   .form-group
     = f.submit "匿名で投稿", class: "form__button--posts"
