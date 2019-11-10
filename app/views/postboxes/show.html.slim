@@ -2,7 +2,7 @@
 
 .postbox
   .postbox-url
-    p.postbox-url__url = "#{request.scheme}://#{request.domain}:#{request.port}/#{@postbox.uid}"
+    p.postbox-url__url = generate_url
     .postbox-url__icon.js-copy-icon
       = icon "far", "copy"
       .postbox-url__description
