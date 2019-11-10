@@ -2,7 +2,7 @@ header.header
   .header__content
     = link_to root_path, class: "header-logo-link" do
       .header-logo
-        = image_tag("anopost_logo.svg", alt: "タイトルロゴ", class: "header-logo__icon")
-        h1.header-logo__app-name = t(:app_name)
+        = image_tag "anopost_logo.svg", alt: "タイトルロゴ", class: "header-logo__icon"
+        h1.header-logo__app-name = t :app_name
     - if show_or_edit_postbox_page?
       = render "admin-link"

@@ -2,15 +2,15 @@ footer.footer
   .footer__content
     = link_to root_path, class: "footer-logo-link" do
       .footer-logo
-        = image_tag("anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon")
-        p.footer-logo__app-name = t(:app_name)
+        = image_tag "anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon"
+        p.footer-logo__app-name = t :app_name
     ul.footer-link
       li.footer-link__item
-        = link_to "このサイトについて", static_pages_about_path, class: "footer-link__text"
+        = link_to "AnoPostとは", static_pages_about_path, class: "footer-link__text"
       li.footer-link__item
-        = link_to "利用規約", static_pages_tos_path, class: "footer-link__text"
+        = link_to "Cookieポリシー", static_pages_privacy_path, class: "footer-link__text"
       li.footer-link__item
-        = link_to "プライバシーポリシー", static_pages_privacy_path, class: "footer-link__text"
+        = link_to "免責事項", static_pages_discramer_path, class: "footer-link__text"
     = link_to "https://github.com/wawawatataru/anopost", class: "footer-github-link" do
       p.footer-copy &copy;wawawatataru
       .footer-icon = icon "fab", "github"

@@ -7,6 +7,6 @@ class StaticPagesController < ApplicationController
   def privacy
   end
 
-  def tos
+  def discramer
   end
 end
