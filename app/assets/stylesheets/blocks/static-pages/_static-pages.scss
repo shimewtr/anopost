@@ -1,17 +1,20 @@
 .static-pages {
   &__title {
     margin-bottom: 1rem;
+    width: 100%;
     color: $font-main;
     font-size: 1rem;
   }
 
   &__sub-title {
     margin-bottom: 0.75rem;
+    width: 100%;
     color: $font-sub;
     font-size: 1rem;
   }
 
   &__text {
+    width: 100%;
     color: $font-sub;
     font-size: 0.75rem;
     line-height: 1.25rem;
