@@ -27,11 +27,6 @@ class PostboxesTest < ApplicationSystemTestCase
     click_button "作成"
     assert_text "パスワード は6文字以上40文字以下で入力してください。"
 
-    fill_in "postbox_password", with: "1" * 41
-    fill_in "postbox_password_confirmation", with:  "1" * 41
-    click_button "作成"
-    assert_text "パスワード は6文字以上40文字以下で入力してください。"
-
     fill_in "postbox_password", with: "123456"
     fill_in "postbox_password_confirmation", with: "654321"
     click_button "作成"

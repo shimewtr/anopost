@@ -2,12 +2,14 @@
   .form-group
     = f.label :title, class: "form__label"
     p.form__sub-label URLを知っているすべてのユーザーに公開されます。(最大100文字)
-    = f.text_field :title, class: "form__text-field", placeholder: "みんなのホットライン"
+    = f.text_field :title, class: "form__text-field js-count-form", placeholder: "みんなのホットライン", maxlength: "100"
+    p.js-count-text
 
   .form-group
     = f.label :description, class: "form__label"
     p.form__sub-label URLを知っているすべてのユーザーに公開されます。(最大200文字)
-    = f.text_area :description, class: "form__text-area", placeholder: "社内での倫理違反行為や不正を発見した際はこちらのホットラインでお知らせください"
+    = f.text_area :description, class: "form__text-area js-count-form", placeholder: "社内での倫理違反行為や不正を発見した際はこちらのホットラインでお知らせください", maxlength: "200"
+    p.js-count-text
 
   - if from == :new
     .form-group
@@ -16,7 +18,8 @@
           |6文字以上のパスワードを入力してください。(最大40文字)
           br
           |パスワードを知っている方はすべての投稿を確認できます。
-        = f.password_field :password, class: "form__text-field"
+        = f.password_field :password, class: "form__text-field js-count-form", maxlength: "40"
+        p.js-count-text
     .form-group
         = f.label :password_confirmation, class: "form__label"
         = f.password_field :password_confirmation, class: "form__text-field"
