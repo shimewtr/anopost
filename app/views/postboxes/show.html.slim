@@ -1,6 +1,11 @@
 - @page_title = @postbox.title
 
 .postbox
+  .postbox-url
+    p.postbox-url__url = "#{request.scheme}://#{request.domain}:#{request.port}/#{@postbox.uid}"
+    .postbox-url__icon.js-copy-icon
+      = icon "far", "copy"
+      .postbox-url__description
   p.postbox__title = @postbox.title
   p.postbox__description = safe_join(@postbox.description.split("\n"), tag(:br))
 .notice

@@ -6,9 +6,9 @@
   height: 100%;
 
   input:checked~.hidden-admin-form {
+    display: flex;
     width: $width-admin-link;
     height: auto;
-    opacity: 1;
   }
 
   &__text {
@@ -57,7 +57,7 @@
 .hidden-admin-form {
   position: absolute;
   top: 1.875rem;
-  display: flex;
+  display: none;
   overflow: hidden;
   flex-direction: column;
   box-sizing: border-box;
@@ -67,7 +67,6 @@
   border-radius: 0.25rem;
   background-color: $background;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 0.375rem;
-  opacity: 0;
 
   &__form-group {
     display: flex;
