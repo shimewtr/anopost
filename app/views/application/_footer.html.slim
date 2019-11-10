@@ -2,8 +2,8 @@ footer.footer
   .footer__content
     = link_to root_path, class: "footer-logo-link" do
       .footer-logo
-        = image_tag("anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon")
-        p.footer-logo__app-name = t(:app_name)
+        = image_tag "anopost_logo_footer.svg", alt: "タイトルロゴ", class: "footer-logo__icon"
+        p.footer-logo__app-name = t :app_name
     ul.footer-link
       li.footer-link__item
         = link_to "AnoPostとは", static_pages_about_path, class: "footer-link__text"

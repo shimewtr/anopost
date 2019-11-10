@@ -57,6 +57,7 @@
 .hidden-admin-form {
   position: absolute;
   top: 1.875rem;
+  z-index: 10;
   display: none;
   overflow: hidden;
   flex-direction: column;

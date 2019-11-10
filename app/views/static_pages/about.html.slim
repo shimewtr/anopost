@@ -1,1 +1,62 @@
-p このサイトについて
+p.static-pages__title AnoPostとは
+p.static-pages__text
+  |AnoPostとは匿名の投書箱を作成できるWebサービスです。
+  br
+  |投書箱を企業倫理ホットラインなどに利用することができます。
+  br
+  |投書箱を作成する方も、投書を投稿する方もアカウント登録を必要とせず、
+  br
+  |いくつかの必要項目を入力するだけで、とても簡単に投書箱を作成することができます。
+p.static-pages__sub-title 使い方
+p.static-pages__sub-sub-title 管理者（投書箱を作成するユーザー）
+.static-pages-block
+  p.static-pages-block__text
+    |TOPページから投書箱の「名前」「説明分」「パスワード」を
+    br
+    |入力し、画面下部の「作成」ボタンをクリックすることで、
+    br
+    |投書箱が作成されます。
+    br
+  = image_tag "about_create.png", class: "static-pages-block__image"
+.static-pages-block
+  p.static-pages-block__text
+    |投書箱が作成されると画面の上部にURLが表示されます。
+    br
+    |URLを紛失すると同一の投書箱にアクセスできなくなります。
+    br
+    |十分にご注意ください。
+    br
+    |URLを配布することで、利用者も投書箱にアクセスできます。
+  = image_tag "about_postbox.png", class: "static-pages-block__image"
+.static-pages-block
+  p.static-pages-block__text
+    |管理者の方はヘッダーの「管理者ログイン」をクリックし、
+    br
+    |投書箱を作成した際の「パスワード」を入力することで、
+    br
+    |投稿された内容の閲覧や投書箱の設定内容を変更できます。
+    br
+    |URLを配布することで、利用者も投書箱にアクセスできます。
+  = image_tag "about_login.png", class: "static-pages-block__image"
+.static-pages-block
+  p.static-pages-block__text
+    |管理者の方は投稿内容を「JSON」「CSV」形式で
+    br
+    |ファイルに出力し、ダウンロードすることができます。
+  = image_tag "about_export.png", class: "static-pages-block__image"
+.static-pages-block
+  p.static-pages-block__text
+    |また、SlackのIncoming Webhook URLを設定することで、
+    br
+    |投稿があった際に投稿をSlackにも投稿することができます。
+  = image_tag "about_slack.png", class: "static-pages-block__image"
+p.static-pages__sub-sub-title 利用者（投書箱に投稿するユーザー）
+.static-pages-block
+  p.static-pages-block__text
+    |管理者の方から共有されたURLにアクセスし、
+    br
+    |入力フォームに投稿内容を入力後、
+    br
+    |「匿名で投稿」ボタンをクリックすると投稿が完了します。
+    br
+  = image_tag "about_user.png", class: "static-pages-block__image"
