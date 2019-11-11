@@ -21,6 +21,10 @@ class Postbox < ApplicationRecord
 
   has_many :posts
 
+  before_validation do
+    self.uid = SecureRandom.urlsafe_base64(20)
+  end
+
   def to_param
     uid
   end
