@@ -19,7 +19,6 @@ class PostboxesController < ApplicationController
 
   def create
     @postbox = Postbox.new(postbox_prams)
-    @postbox.uid = SecureRandom.urlsafe_base64(20)
     if @postbox.save
       redirect_to postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を作成しました"
     else
