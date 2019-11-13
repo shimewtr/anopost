@@ -2,6 +2,7 @@
     - if @postbox.posts.empty?
       p.posts-item__none-text まだ投稿がありません。
     - else
+      p.export-description 投稿された内容はCSV形式、JSON形式でダウンロードすることができます。
       .export-buttons
         = link_to postbox_posts_path(postbox_uid: @postbox.uid, format: :csv), class: "export-button--csv" do
           .export-button__icon = icon "fas", "file-export"

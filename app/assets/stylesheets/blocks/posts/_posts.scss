@@ -44,6 +44,13 @@
   }
 }
 
+.export-description {
+  margin-bottom: 0.75rem;
+  padding-left: 1.1875rem;
+  color: $font-main;
+  font-size: 0.75rem;
+}
+
 .export-buttons {
   display: flex;
   flex-direction: row;
