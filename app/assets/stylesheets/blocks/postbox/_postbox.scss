@@ -14,10 +14,12 @@
   }
 
   &__description {
+    margin-bottom: 0.625rem;
     width: 100%;
     color: $font-sub;
     font-size: 0.875rem;
     line-height: 1.2rem;
+
   }
 }
 
@@ -26,7 +28,6 @@
   flex-direction: row;
   justify-content: space-around;
   box-sizing: border-box;
-  margin-bottom: 0.625rem;
   padding: 0.5rem;
   width: 100%;
   border: 1px solid $border-url;
@@ -78,4 +79,11 @@
       content: "";
     }
   }
+}
+
+.url-explanation {
+  width: 100%;
+  color: $font-sub;
+  font-size: 0.75rem;
+  line-height: 1.2rem;
 }
