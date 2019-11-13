@@ -1,15 +1,21 @@
 body {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    // min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3.125rem 0;
-    width: $width-main-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.125rem 0;
+  width: $width-main-content;
+}
+
+
+@media screen and (max-width: 480px) {
+  .content {
+    width: 90%;
+  }
 }
