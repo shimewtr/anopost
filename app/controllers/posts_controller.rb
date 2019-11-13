@@ -54,6 +54,7 @@ class PostsController < ApplicationController
     end
 
     def csv_export(postbox)
+      require "csv"
       csv_data = CSV.generate do |csv|
         csv_column_names = ["投稿内容", "投稿時間"]
         csv << csv_column_names
@@ -73,6 +74,6 @@ class PostsController < ApplicationController
       postbox.posts.each do |post|
         posts.push(content: post.content, date: post.created_at.strftime("%Y/%-m/%-d %-H:%-M:%-S"))
       end
-      send_data(hash.to_json, filename: "posts.json")
+      send_data(posts.to_json, filename: "posts.json")
     end
 end
