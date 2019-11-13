@@ -3,13 +3,13 @@
 require "test_helper"
 
 class SessionsHelperTest < ActionView::TestCase
-  test "ログインするとsessionにpostboxが正しく保存されるか" do
+  test "log_in" do
     postbox = postboxes(:postbox_1)
     log_in(postbox)
     assert_equal session[:postbox], "jPnI0mCqv8LIPyGY9xXrIWiZadg"
   end
 
-  test "現在ログインしている投書箱の情報が正しいか" do
+  test "current_postbox" do
     assert_nil current_postbox
 
     postbox = postboxes(:postbox_1)
@@ -18,7 +18,7 @@ class SessionsHelperTest < ActionView::TestCase
     assert_equal current.uid, "jPnI0mCqv8LIPyGY9xXrIWiZadg"
   end
 
-  test "ログアウトするとsessionが正しく削除されるか" do
+  test "log_out" do
     postbox = postboxes(:postbox_1)
     log_in(postbox)
     assert_not_nil session[:postbox]
@@ -29,7 +29,7 @@ class SessionsHelperTest < ActionView::TestCase
     assert_nil current_postbox
   end
 
-  test "ログインしているかを正しく判定できるか" do
+  test "logged_in?" do
     assert_not logged_in?
 
     postbox = postboxes(:postbox_1)
@@ -40,7 +40,7 @@ class SessionsHelperTest < ActionView::TestCase
     assert_not logged_in?
   end
 
-  test "管理者としてログインしているかを正しく判定できるか" do
+  test "admin_login?" do
     assert_not admin_login?
 
     postbox = postboxes(:postbox_1)
