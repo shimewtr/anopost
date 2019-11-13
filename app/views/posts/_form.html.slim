@@ -1,8 +1,8 @@
 = form_with model: post, url: postbox_posts_path(postbox_uid: @postbox.uid) do |f|
   .form-group
     = f.label "投稿内容", class: "form__label"
-    p.form__sub-label 投稿内容を入力してください。(最大200文字)
-    = f.text_area :content, class: "form__text-area js-count-form", maxLength: "200"
+    p.form__sub-label 投稿内容を入力してください。(最大1000文字)
+    = f.text_area :content, class: "form__text-area js-count-form", maxLength: "1000"
     p.js-count-text
 
   .form-group
