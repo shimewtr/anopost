@@ -1,13 +1,14 @@
 - @page_title = @postbox.title
 
 .postbox
+  p.postbox__title = @postbox.title
+  p.postbox__description = safe_join(@postbox.description.split("\n"), tag(:br))
   .postbox-url
     p.postbox-url__url = generate_url
     .postbox-url__icon.js-copy-icon
       = icon "far", "copy"
       .postbox-url__description
-  p.postbox__title = @postbox.title
-  p.postbox__description = safe_join(@postbox.description.split("\n"), tag(:br))
+  .url-explanation 投稿してほしい人にURLを共有してください。右側のアイコンをクリックするとコピーすることができます。
 .notice
   p.notice__text
     |投稿した内容は投書箱を作成した管理者のみが閲覧することができます。
