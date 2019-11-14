@@ -3,14 +3,14 @@
 require "test_helper"
 
 class ApplicationHelperTest < ActionView::TestCase
-  test "正しいページタイトルを返すか" do
+  test "page_title" do
     assert_equal "AnoPost", page_title
 
     @page_title = "タイトルのテスト"
     assert_equal "タイトルのテスト | AnoPost", page_title
   end
 
-  test "投書箱のshowページ、editページの判定が正しいか" do
+  test "show_or_edit_postbox_page?" do
     def controller_path
       "postboxes"
     end

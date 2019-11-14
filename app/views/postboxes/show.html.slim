@@ -4,7 +4,7 @@
   p.postbox__title = @postbox.title
   p.postbox__description = safe_join(@postbox.description.split("\n"), tag(:br))
   .postbox-url
-    p.postbox-url__url = generate_url
+    p.postbox-url__url = "#{root_url}#{@postbox.uid}"
     .postbox-url__icon.js-copy-icon
       = icon "far", "copy"
       .postbox-url__description

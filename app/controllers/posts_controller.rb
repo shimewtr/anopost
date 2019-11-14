@@ -41,7 +41,7 @@ class PostsController < ApplicationController
         username = "AnoPost"
         attachments = [{
           title: postbox.title,
-          title_link: "#{request.scheme}://#{request.domain}:#{request.port}/#{postbox.uid}",
+          title_link: "#{root_url}#{postbox.uid}",
           fallback: "comment body.",
           author_name: "AnoPost",
           author_icon: "https://raw.githubusercontent.com/wawawatataru/anopost/master/app/assets/images/android-chrome-256x256.png",
