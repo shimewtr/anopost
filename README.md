@@ -6,6 +6,8 @@
 
 [![CircleCI](https://circleci.com/gh/wawawatataru/anopost.svg?style=svg)](https://circleci.com/gh/wawawatataru/anopost)
 
+[LINK](https://anopost.xyz/)
+
 ## AnoPostとは
 
 `AnoPost` というサービスは、
@@ -21,6 +23,8 @@
 `匿名質問箱や既存のホットライン作成サービス`とは違って、
 
 `アカウント登録や利用料金なしにすぐさま企業倫理ホットラインを作成できる機能`が備わっている事が特徴です。
+
+[使い方はこちら](https://anopost.xyz/static_pages/about)
 
 ## Lint&Test
 下記のlintとテストが実装されます。
