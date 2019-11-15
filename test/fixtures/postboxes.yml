@@ -11,17 +11,3 @@ postbox_2:
   title: テストのポストボックス
   description: このポストボックスはテスト用です。
   password_digest: $2a$12$9fClZs15CaxWktF1Wm5Q2.u.spqlvxl0UPUp8XPq8BXgccVioeAVO #123456
-
-published_postbox:
-  id: 100
-  uid: D7apaq6Rb7iv64YjOE0Ay84zTNo
-  title: テストのポストボックス
-  description: このポストボックスはテスト用です。
-  password_digest: $2a$12$9fClZs15CaxWktF1Wm5Q2.u.spqlvxl0UPUp8XPq8BXgccVioeAVO #123456
-
-unpublished_postbox:
-  id: 101
-  uid: D7apaq6Rb7iv64YjOE0Ay84zTN0
-  title: テストのポストボックス
-  description: このポストボックスはテスト用です。
-  password_digest: $2a$12$bFCvoA.dWA/Jg8M4lOYWzOQyiHynGVr..VkeRzV7LFBgMtjO9KrbW
