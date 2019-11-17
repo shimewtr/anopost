@@ -33,3 +33,9 @@
     font-size: $font-header-logo;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 90%;
+  }
+}

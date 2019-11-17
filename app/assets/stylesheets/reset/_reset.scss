@@ -171,3 +171,22 @@ input,
 select {
     vertical-align: middle;
 }
+
+input[type="submit"],
+input[type="button"] {
+    -webkit-box-sizing: content-box;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+
+    -webkit-appearance: button;
+    appearance: button;
+
+    &::-webkit-search-decoration {
+        display: none;
+    }
+
+    &::focus {
+        outline-offset: -2px;
+    }
+}
