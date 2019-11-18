@@ -1,20 +1,35 @@
 .introduction {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 3.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3.75rem;
+
+  &__icon {
+    margin-bottom: 1.375rem;
+    width: $width-introduction-icon;
+    height: $height-introduction-icon;
+  }
+
+  &__text {
+    color: $font-main;
+    text-align: center;
+    font-weight: normal;
+    font-size: $font-introduction-text;
+    line-height: $line-height-introduction-text;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .introduction {
 
     &__icon {
-        margin-bottom: 1.375rem;
-        width: $width-introduction-icon;
-        height: $height-introduction-icon;
+      width: $width-introduction-icon-mobile;
+      height: $height-introduction-icon-mobile;
     }
 
     &__text {
-        color: $font-main;
-        text-align: center;
-        font-weight: normal;
-        font-size: $font-introduction-text;
-        line-height: $line-height-introduction-text;
+      font-size: $font-introduction-text-mobile;
+      line-height: $line-height-introduction-text-mobile;
     }
+  }
 }
