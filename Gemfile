@@ -19,6 +19,7 @@ gem "html2slim"
 gem "font-awesome-sass", "~> 5.11.2"
 gem "bcrypt", "~> 3.1.7"
 gem "slack-notifier"
+gem "meta-tags"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
