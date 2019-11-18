@@ -9,7 +9,8 @@ html
     = render "favicon"
     = render "meta"
   body
-    = render "header"
+    - unless current_page?(root_path)
+      = render "header"
     .content
       - if flash.notice.present?
         .alert.alert-success

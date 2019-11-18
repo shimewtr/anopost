@@ -16,6 +16,10 @@
 
 form {
   width: 100%;
+
+  & div:nth-last-of-type(2) {
+    margin-bottom: 1rem;
+  }
 }
 
 .form-group {

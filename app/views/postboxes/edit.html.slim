@@ -3,6 +3,7 @@
     - @postbox.errors.full_messages.each do |msg|
       p.alert__message = msg
 .edit-tab
+  p.edit-tab__description このページは管理者のみが見れます。
   input#posts-tab type="radio" name="edit-tab__item" checked=true
   label.edit-tab__item.edit-tab__item-posts for="posts-tab" 投稿一覧
   input#form-tab type="radio" name="edit-tab__item"
