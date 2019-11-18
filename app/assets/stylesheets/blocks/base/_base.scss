@@ -1,6 +1,7 @@
 body {
   display: flex;
   align-items: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -12,7 +13,6 @@ body {
   padding: 3.125rem 0;
   width: $width-main-content;
 }
-
 
 @media screen and (max-width: 480px) {
   .content {

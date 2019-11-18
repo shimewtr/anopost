@@ -5,6 +5,7 @@
   width: 100%;
   border-radius: $border-alert-notice;
   font-size: $font-alert-notice;
+  line-height: 1.25rem;
 
   &-success {
     border: solid 1px $border-alert-success;

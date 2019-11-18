@@ -8,7 +8,9 @@
     .postbox-url__icon.js-copy-icon
       = icon "far", "copy"
       .postbox-url__description
-  .url-explanation 投稿してほしい人にURLを共有してください。右側のアイコンをクリックするとコピーすることができます。
+  .url-explanation URLを共有された方が投書箱を利用できます。右側のアイコンをクリックするとコピーすることができます。
+.post-form
+  = render "/posts/form", from: :new, url: postbox_posts_path(postbox_uid: @postbox.uid), post: @post
 .notice
   p.notice__text
     |投稿した内容は投書箱を作成した管理者のみが閲覧することができます。
@@ -18,5 +20,3 @@
     |「発信者情報開示」の要請があった場合などを除き、発信者のIPアドレスなど
     br
     |各種個人情報を開示することはありません。
-.post-form
-  = render "/posts/form", from: :new, url: postbox_posts_path(postbox_uid: @postbox.uid), post: @post

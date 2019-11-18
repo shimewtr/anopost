@@ -16,6 +16,10 @@
 
 form {
   width: 100%;
+
+  & div:nth-last-of-type(2) {
+    margin-bottom: 1rem;
+  }
 }
 
 .form-group {
@@ -58,15 +62,17 @@ form {
     width: 100%;
     color: $font-sub;
     font-size: $font-form-sub-label;
+    line-height: 1.5;
   }
 
   &__text-field {
     box-sizing: border-box;
     margin-bottom: 0.375rem;
+    padding: $padding-form;
     width: 100%;
     height: $height-form-text-field;
     outline: none;
-    border: $border-form solid $main;
+    border: $border-form solid $border;
     border-radius: $border-radius-form;
     font-size: $font-form-text-field;
 
@@ -77,21 +83,33 @@ form {
 
       @include form-forcus-box-shadow($main);
     }
+
+    & input {
+      padding: $padding-form;
+      color: $font-main;
+    }
   }
 
   &__text-area {
     box-sizing: border-box;
     margin-bottom: 0.375rem;
+    padding: $padding-form;
     min-height: $height-form-text-area;
     width: 100%;
     outline: none;
-    border: $border-form solid $main;
+    border: $border-form solid $border;
     border-radius: $border-radius-form;
+    font-size: $font-form-text-area;
 
     &:focus {
       border: $border-form solid $main;
 
       @include form-forcus-box-shadow($main);
+    }
+
+    & input {
+      padding: $padding-form;
+      color: $font-main;
     }
   }
 
@@ -121,7 +139,7 @@ form {
     margin-left: 1.25rem;
     width: $width-button;
     height: $height-button;
-    border-radius: 5px;
+    border-radius: $border-radius-button;
     background-color: $button-warning;
     color: white;
     text-decoration: none;
@@ -137,4 +155,10 @@ form {
   height: 1rem;
   color: $font-sub;
   font-size: $font-form-sub-label;
+}
+
+@media screen and (max-width: 480px) {
+  .form-group {
+    margin-bottom: 1rem;
+  }
 }

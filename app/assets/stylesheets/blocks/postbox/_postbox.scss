@@ -14,7 +14,7 @@
   }
 
   &__description {
-    margin-bottom: 0.625rem;
+    margin-bottom: 2rem;
     width: 100%;
     color: $font-sub;
     font-size: 0.875rem;
@@ -28,6 +28,7 @@
   flex-direction: row;
   justify-content: space-around;
   box-sizing: border-box;
+  margin-bottom: 0.25rem;
   padding: 0.5rem;
   width: 100%;
   border: 1px solid $border-url;
@@ -38,12 +39,14 @@
   line-height: 1.25rem;
 
   &__url {
-    flex: 9;
+    width: 90%;
+
+    overflow-wrap: break-word;
   }
 
   &__icon {
     position: relative;
-    flex: 1;
+    width: 10%;
     text-align: center;
     cursor: pointer;
 

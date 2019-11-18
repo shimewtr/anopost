@@ -1,12 +1,11 @@
 .notice {
   box-sizing: border-box;
-  margin-bottom: 1rem;
   padding: $padding-alert-notice;
   width: 100%;
   border: solid 1px $border-alert-info;
   border-radius: $border-alert-notice;
   background-color: $background-alert-info;
   color: $font-alert-info;
-  font-size: $font-alert-notice;
-  line-height: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }

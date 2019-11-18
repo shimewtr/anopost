@@ -22,6 +22,8 @@
         p.js-count-text
     .form-group
         = f.label :password_confirmation, class: "form__label"
+        p.form__sub-label
+          |確認のため再度パスワードを入力してください。
         = f.password_field :password_confirmation, class: "form__text-field"
 
   - if from == :edit
