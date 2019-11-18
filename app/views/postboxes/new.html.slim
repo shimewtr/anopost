@@ -4,6 +4,26 @@
     |AnoPostは匿名の投書箱を簡単に作成できる
     br
     |Webサービスです。
+.three-points
+  p.three-points__title AnoPostの3つの特徴
+  .three-points-boxes
+    .three-points-box
+      .three-points-box__icon = icon "fas", "user-alt-slash"
+      p.three-points-box__text 1.お手軽・便利
+    .three-points-box
+      .three-points-box__icon = icon "fas", "user-secret"
+      p.three-points-box__text 2.完全匿名性
+    .three-points-box
+      .three-points-box__icon = icon "fab", "github"
+      p.three-points-box__text 3.オープンソース
+  ol.three-points-description
+    li.three-points-description__item
+      | ユーザー登録は必要ありません。投書箱をとても簡単に作成できます。
+    li.three-points-description__item
+      | 投稿は匿名でおこなえます。誰が投稿したかは誰にもわかりません。
+    li.three-points-description__item
+      | GitHubでソースを公開しています。Herokuへのデプロイや機能改修が行えます。
+
 - if @postbox.errors.any?
   .alert.alert-warning
     - @postbox.errors.full_messages.each do |msg|
