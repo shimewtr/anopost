@@ -1,0 +1,66 @@
+.three-points {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3.75rem;
+  width: 100%;
+
+  &__title {
+    margin-bottom: 0.875rem;
+    width: 100%;
+    color: $font-main;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+}
+
+.three-points-boxes {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.875rem;
+  width: 100%;
+}
+
+.three-points-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 30%;
+  height: 120px;
+  border: 1px solid $main;
+  border-radius: 0.25rem;
+  background-color: rgba($main, 0.075);
+
+  &__icon {
+    color: $main;
+    font-size: 60px;
+  }
+
+  &__text {
+    color: $main;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.three-points-description {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  color: $font-main;
+  list-style-position: inside;
+  font-size: 1rem;
+
+  &__item {
+    box-sizing: border-box;
+    margin-bottom: 0.375rem;
+    width: 100%;
+    color: $font-sub;
+    line-height: 1.5rem;
+  }
+}
