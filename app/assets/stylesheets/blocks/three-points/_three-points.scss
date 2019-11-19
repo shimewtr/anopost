@@ -61,6 +61,16 @@
     margin-bottom: 0.375rem;
     width: 100%;
     color: $font-sub;
+    font-size: 0.875rem;
     line-height: 1.5rem;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .three-points-box {
+    &__text {
+      font-size: 0.75rem;
+    }
   }
 }
