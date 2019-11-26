@@ -18,7 +18,7 @@ class PostboxesController < ApplicationController
   end
 
   def create
-    @postbox = Postbox.new(postbox_prams)
+    @postbox = Postbox.new(postbox_params)
     if @postbox.save
       redirect_to postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を作成しました"
     else
@@ -30,7 +30,7 @@ class PostboxesController < ApplicationController
   end
 
   def update
-    if @postbox.update(update_postbox_prams)
+    if @postbox.update(update_postbox_params)
       redirect_to postbox_path(uid: @postbox.uid), notice: "#{@postbox.title}を更新しました"
     else
       render :edit
@@ -51,11 +51,11 @@ class PostboxesController < ApplicationController
       @postbox = Postbox.find_by!(uid: params[:uid])
     end
 
-    def postbox_prams
+    def postbox_params
       params.require(:postbox).permit(:title, :description, :password, :password_confirmation)
     end
 
-    def update_postbox_prams
+    def update_postbox_params
       params.require(:postbox).permit(:title, :description, :slack_webhook_url)
     end
 end
