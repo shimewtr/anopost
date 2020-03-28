@@ -24,7 +24,7 @@
 
 `アカウント登録や利用料金なしにすぐさま企業倫理ホットラインを作成できる機能`が備わっている事が特徴です。
 
-[使い方はこちら](https://anopost.xyz/static_pages/about)
+[使い方はこちら](https://anopost.herokuapp.com/static_pages/about)
 
 ## Lint&Test
 下記のlintとテストが実装されます。
