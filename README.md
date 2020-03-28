@@ -6,7 +6,7 @@
 
 [![CircleCI](https://circleci.com/gh/wawawatataru/anopost.svg?style=svg)](https://circleci.com/gh/wawawatataru/anopost)
 
-[LINK](https://anopost.xyz/)
+[LINK](https://anopost.herokuapp.com/)
 
 ## AnoPostとは
 
