@@ -89,11 +89,11 @@ GEM
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
-    i18n (1.8.2)
+    i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
+    jbuilder (2.10.0)
+      activesupport (>= 5.0.0)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -240,7 +240,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
@@ -253,7 +253,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass (~> 5.13.0)
   html2slim
-  jbuilder (~> 2.7)
+  jbuilder (~> 2.10)
   listen (>= 3.0.5, < 3.3)
   meta-tags
   pg
