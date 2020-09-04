@@ -17,7 +17,7 @@ gem "dotenv-rails"
 gem "slim-rails"
 gem "html2slim"
 gem "font-awesome-sass", "~> 5.13.0"
-gem "bcrypt", "~> 3.1.15"
+gem "bcrypt", "~> 3.1.16"
 gem "slack-notifier"
 gem "meta-tags"
 
