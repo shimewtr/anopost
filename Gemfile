@@ -16,7 +16,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "dotenv-rails"
 gem "slim-rails"
 gem "html2slim"
-gem "font-awesome-sass", "~> 5.15.1"
+gem "font-awesome-sass", "~> 6.2.1"
 gem "bcrypt", "~> 3.1.18"
 gem "slack-notifier"
 gem "meta-tags"
